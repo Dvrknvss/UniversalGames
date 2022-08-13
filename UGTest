@@ -63,13 +63,13 @@ end})
 SectionUFE:AddParagraph("Credits:","Owner: Dvrknvss#0688                                                                    Development: collorem (Retired)                                                      Script Tester/Finder: On_Man#9106                                                Script Contributions: Lego#9007 and NK#2022                                                                          UI: Orion Library")
 --Dropdowns
 _G.gamestoteleport = "Select game to teleport"
-SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game to Teleport", Options = {
-"Anime Dimensions","Anime Fighters","Arsenal","Attack On Titan: Downfall","Blox Fruits","Blox Hunt","Boku No Roblox",
+SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game to Teleport", Options = {"Animal Sim",
+"Anime Dimensions","Anime Fighters","Arsenal","Assasin","Attack On Titan: Downfall","Bee Swarm Simulator","Blox Fruits","Blox Hunt","Boku No Roblox",
 "Break In","Brookhaven","Car Crushers 2","Counter Blox","Da Hood","Destruction Simulator","Dig It","Dragon Ball Rage","Dungeon Quest","Field Trip Z",
-"Fishing Simulator","Flood Escape 2","Giant Survival","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
-"Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends","One Piece Prime","Online Business Sim","Pet Simulator X","Phantom Forces","Prison Life",
+"Fishing Simulator","Flood Escape 2","Fortress Tycoon","Giant Survival","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
+"Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends","One Piece Prime","Online Business Sim","Pet Simulator X","Phantom Forces","PISTOL 1V1","Prison Life",
 "Punching Sim","Redwood Prison ","Ro Ghoul","Rumble Quest","Sharkbite","Shinobi Life 2","Skywars","Slime Tycoon","SuperPower Training Sim","Tapping Mania",
-"The Rake Reamastered","Tower of Hell","Tradelands","Treasure Quest","Viet Nam Piece","World Of Magic","Zombie Attack","Zombie Rush"}, Callback = function(Value)
+"The Rake Reamastered","Tower of Hell","Tradelands","Treasure Quest","Viet Nam Piece","World Of Magic","Zombie Attack","Zombie Defense","Zombie Rush"}, Callback = function(Value)
     _G.gamestoteleport = Value
 end})
 SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = function()
@@ -625,5 +625,6 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
 end
 OrionLib:Init()
 syn.queue_on_teleport([[
+    wait(60)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/UGTest"))()
 ]])
