@@ -65,10 +65,10 @@ SectionUFE:AddParagraph("Credits:","Owner: Dvrknvss#0688                        
 _G.gamestoteleport = "Select game to teleport"
 SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game to Teleport", Options = {
 "Anime Dimensions","Anime Fighters","Arsenal","Attack On Titan: Downfall","Blox Fruits","Blox Hunt",
-"Break In","Brookhaven","Car Crushers 2","Counter Blox","Da Hood","Destruction Simulator","Dig It","Dragon Ball Rage","Dungeon Quest","Field Trip Z",
+"Break In","Brookhaven","Car Crushers 2","Da Hood","Destruction Simulator","Dig It","Dungeon Quest","Field Trip Z",
 "Flood Escape 2","Giant Survival","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
 "Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends","Pet Simulator X","Phantom Forces","Prison Life",
-"Punching Sim","Redwood Prison ","Ro Ghoul","Rumble Quest","Sharkbite","Shinobi Life 2","Skywars","SuperPower Training Sim","Tapping Mania",
+"Ro Ghoul","Rumble Quest","Sharkbite","Skywars",
 "The Rake Reamastered","Tower of Hell","Viet Nam Piece","Zombie Attack"}, Callback = function(Value)
     _G.gamestoteleport = Value
 end})
@@ -624,5 +624,6 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
     end})
 end
 syn.queue_on_teleport([[ loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/UGTest'))()
+print("hi")
 ]])
 OrionLib:Init()
