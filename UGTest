@@ -624,6 +624,6 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
     end})
 end
 OrionLib:Init()
-syn.queue_on_teleport([[ loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/UGTest'))()
+syn.queue_on_teleport([[
 print("hi")
 ]])
