@@ -196,7 +196,6 @@ SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = functi
     elseif _G.gamestoteleport == "Destruction Simulator" then
         game:GetService("TeleportService"):Teleport(2248408710, player)
     end
-    
 end})
 -- Supported Games
 if game.PlaceId == 2753915549 then --Blox Fruits
@@ -625,11 +624,4 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AquaModz/DestructionSIMModded/main/DestructionSimAqua.lua"))()
     end})
 end
-Players.LocalPlayer.OnTeleport:Connect(function(State)
-	if State == Enum.TeleportState.Started then
-		if queueteleport then
-			queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/UGTest'))()")
-		end
-	end
-end)
 OrionLib:Init()
