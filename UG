@@ -66,7 +66,7 @@ _G.gamestoteleport = "Select game to teleport"
 SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game to Teleport", Options = {
 "Anime Dimensions","Anime Fighters","Arsenal","Attack On Titan: Downfall","Blox Fruits","Blox Hunt",
 "Break In","Brookhaven","Car Crushers 2","Da Hood","Destruction Simulator","Dig It","Dungeon Quest","Field Trip Z",
-"Flood Escape 2","Giant Survival","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
+"Flood Escape 2","Giant Survival","Gumball Factory Tycoon","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
 "Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends","Pet Simulator X","Phantom Forces","Prison Life",
 "Ro Ghoul","Rumble Quest","Sharkbite","Skywars",
 "The Rake Reamastered","Tower of Hell","Viet Nam Piece","Zombie Attack"}, Callback = function(Value)
@@ -194,6 +194,8 @@ SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = functi
         game:GetService("TeleportService"):Teleport(379614936, player)
     elseif _G.gamestoteleport == "Destruction Simulator" then
         game:GetService("TeleportService"):Teleport(2248408710, player)
+    elseif _G.gamestoteleport == "Gumball Factory Tycoon" then
+        game:GetService("TeleportService"):Teleport(9976239895, player)
     end
 end})
 -- Supported Games
@@ -601,6 +603,13 @@ elseif game.PlaceId == 418574428 then --Downfall
         executedNotif()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EuHellscytheLua/AOTV0.01/master/EusAOTUi.lua"))()
     end})
+elseif game.PlaceId == 9976239895 then --Gumball Factory Tycoon
+    local DetectedGameTab = Window:MakeTab({Name = "Gumball Factory Tycoon", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+    local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
+    SectionSupportedGame:AddButton({Name =  "Novice Hub", Callback = function()
+        executedNotif()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Amphvptere/Novice/main/GumballFT", true))()
+    end})
 --[[elseif game.PlaceId == 2960777560 then --Treasure Quest
     local DetectedGameTab = Window:MakeTab({Name = "Treasure Quest", Icon = "rbxassetid://4483345998", PremiumOnly = false})
     local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
@@ -623,4 +632,7 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AquaModz/DestructionSIMModded/main/DestructionSimAqua.lua"))()
     end})
 end
+syn.queue_on_teleport(
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing'))()
+)
 OrionLib:Init()
