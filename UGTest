@@ -1,5 +1,4 @@
 --Keep this
-local queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Universal Games - ScriptHub / Version 1.0.3", HidePremium = true, IntroText = "Universal Games ScriptHub", IntroIcon = "rbxassetid://6031094686", Icon = "rbxassetid://6031094686", SaveConfig = true, ConfigFolder = "Games-Hub Config"})
 -----------------------------------------------------------------------------------------------------------------------------
