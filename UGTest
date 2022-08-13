@@ -68,7 +68,7 @@ SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game t
 "Break In","Brookhaven","Car Crushers 2","Counter Blox","Da Hood","Destruction Simulator","Dig It","Dragon Ball Rage","Dungeon Quest","Field Trip Z",
 "Flood Escape 2","Giant Survival","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
 "Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends","Pet Simulator X","Phantom Forces","Prison Life",
-"Punching Sim","Redwood Prison ","Ro Ghoul","Rumble Quest","Sharkbite","Shinobi Life 2","Skywars","Slime Tycoon","SuperPower Training Sim","Tapping Mania",
+"Punching Sim","Redwood Prison ","Ro Ghoul","Rumble Quest","Sharkbite","Shinobi Life 2","Skywars","SuperPower Training Sim","Tapping Mania",
 "The Rake Reamastered","Tower of Hell","Viet Nam Piece","Zombie Attack"}, Callback = function(Value)
     _G.gamestoteleport = Value
 end})
