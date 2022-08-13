@@ -407,7 +407,7 @@ elseif game.PlaceId == 474657433 then --Fortress Tycoon
     local DetectedGameTab = Window:MakeTab({Name = "Fortress Tycoon", Icon = "rbxassetid://4483345998", PremiumOnly = false})
     local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
     SectionSupportedGame:AddButton({Name =  "Update name pls", Callback = function()
-    loadstring(game:HttpGet(""https://raw.githubusercontent.com/v3rmscripts/scripts-repo/master/scripts/LoadstringMnvnXcE3raYWpaste"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/v3rmscripts/scripts-repo/master/scripts/LoadstringMnvnXcE3raYWpaste"))()
     end})
 elseif game.PlaceId == 4711958375 then --Zombie Defence
     local DetectedGameTab = Window:MakeTab({Name = "Zombie Defence", Icon = "rbxassetid://4483345998", PremiumOnly = false})
