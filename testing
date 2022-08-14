@@ -7,11 +7,17 @@ local function hasChar()
     end
     return false
 end
+game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
+    if State == Enum.TeleportState.Started then
+        repeat task.wait() until game:IsLoaded()
+        syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing'))()")
+    end
+end)
 --Keep this
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Universal Games - ScriptHub / Version 1.0.2", HidePremium = true, IntroText = "Universal Games ScriptHub", IntroIcon = "rbxassetid://6031094686", Icon = "rbxassetid://6031094686", SaveConfig = true, ConfigFolder = "Games-Hub Config"})
 -----------------------------------------------------------------------------------------------------------------------------
-repeat task.wait() until hasChar()
+repeat task.wait() until game:IsLoaded()
 --Tabs
 local UFE = Window:MakeTab({Name = "Universal FE", Icon = "rbxassetid://6031094686", PremiumOnly = false})
 local Games = Window:MakeTab({Name = "Games Teleport", Icon = "rbxassetid://6034227061", PremiumOnly = false})
@@ -78,9 +84,9 @@ SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game t
 "Anime Dimensions","Anime Fighters","Arsenal","Attack On Titan: Downfall","Blox Fruits","Blox Hunt",
 "Break In","Brookhaven","Car Crushers 2","Da Hood","Destruction Simulator","Dig It","Dungeon Quest","Field Trip Z",
 "Flood Escape 2","Giant Survival","Gumball Factory Tycoon","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
-"Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends","OOF Tycoon!","Pet Simulator X","Phantom Forces","Prison Life",
+"Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends", "OOF Tycoon!","Pet Simulator X","Phantom Forces","Prison Life",
 "Ro Ghoul","Rumble Quest","Sharkbite","Skywars",
-"The Rake Reamastered","Tower of Hell","Viet Nam Piece","Zombie Attack"}, Callback = function(Value)
+"The Rake Remastered","Tower of Hell","Viet Nam Piece","Zombie Attack"}, Callback = function(Value)
     _G.gamestoteleport = Value
 end})
 SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = function()
@@ -117,7 +123,7 @@ SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = functi
         game:GetService("TeleportService"):Teleport(155615604, player)
     elseif _G.gamestoteleport == "Ragdoll Engine" then
         game:GetService("TeleportService"):Teleport(5683833663, player)
-    elseif _G.gamestoteleport == "The Rake Reamastered" then
+    elseif _G.gamestoteleport == "The Rake Remastered" then
         game:GetService("TeleportService"):Teleport(2413927524, player)
     elseif _G.gamestoteleport == "Lucky Block Battlegrounds" then
         game:GetService("TeleportService"):Teleport(662417684, player)
@@ -713,11 +719,4 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AquaModz/DestructionSIMModded/main/DestructionSimAqua.lua"))()
     end})
 end
-spawn(function()
-    game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
-        if State == Enum.TeleportState.Started then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing'))()")
-        end
-    end)
-end)
 OrionLib:Init() 
