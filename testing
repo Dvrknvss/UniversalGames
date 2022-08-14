@@ -1,5 +1,6 @@
 -- Reference Values
 local player = game:GetService("Players").LocalPlayer
+
 -- Useful Functions
 local function hasChar()
     if player.Character and player.Character.Parent and player.Character.Parent.Parent and player.Character:FindFirstChild("HumanoidRootPart") then 
@@ -718,4 +719,5 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AquaModz/DestructionSIMModded/main/DestructionSimAqua.lua"))()
     end})
 end
+
 OrionLib:Init() 
