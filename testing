@@ -1,6 +1,6 @@
 -- Reference Values
 local player = game:GetService("Players").LocalPlayer
-local queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
+local queueteleport = (syn.queue_on_teleport) or queue_on_teleport or (fluxus.queue_on_teleport)
 -- Useful Functions
 local function hasChar()
     if player.Character and player.Character.Parent and player.Character.Parent.Parent and player.Character:FindFirstChild("HumanoidRootPart") then 
@@ -10,7 +10,7 @@ local function hasChar()
 end
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-        queueteleport("repeat task.wait() until game:IsLoaded() loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing', true))()")
+        queue_on_teleport("repeat task.wait() until game:IsLoaded() loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing', true))()")
     end
 end)
 --Keep this
