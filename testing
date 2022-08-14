@@ -9,8 +9,7 @@ local function hasChar()
 end
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-        repeat task.wait() until game:IsLoaded()
-        syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing'))()")
+        syn.queue_on_teleport("repeat task.wait() until game:IsLoaded() loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing', true))()")
     end
 end)
 --Keep this
