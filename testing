@@ -716,7 +716,7 @@ end
 spawn(function()
     game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
         if State == Enum.TeleportState.Started then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/UG'))()")
+            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing'))()")
         end
     end)
 end)
