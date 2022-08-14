@@ -14,7 +14,7 @@ player.OnTeleport:Connect(function(State)
 end)
 --Keep this
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Universal Games - ScriptHub / Version 1.0.2", HidePremium = true, IntroText = "Universal Games ScriptHub", IntroIcon = "rbxassetid://6031094686", Icon = "rbxassetid://6031094686", SaveConfig = true, ConfigFolder = "Games-Hub Config"})
+local Window = OrionLib:MakeWindow({Name = "Universal Games - ScriptHub / Version 1.0.3", HidePremium = true, IntroText = "Universal Games ScriptHub", IntroIcon = "rbxassetid://6031094686", Icon = "rbxassetid://6031094686", SaveConfig = true, ConfigFolder = "Games-Hub Config"})
 -----------------------------------------------------------------------------------------------------------------------------
 repeat task.wait() until game:IsLoaded()
 --Tabs
