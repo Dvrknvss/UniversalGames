@@ -717,5 +717,12 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
         executedNotif()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AquaModz/DestructionSIMModded/main/DestructionSimAqua.lua"))()
     end})
+ elseif game.PlaceId == 9463737803 then -- Wimbleworld
+    local DetectedGameTab = Window:MakeTab({Name = "Wimbleworld", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+    local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
+    SectionSupportedGame:AddButton({Name =  "FijiHub", Callback = function()
+        executedNotif()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/anthasenteredthechat/scriptz/main/wimblenaya"))()
+    end})
 end
 OrionLib:Init() 
