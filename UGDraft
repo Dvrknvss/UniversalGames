@@ -80,11 +80,12 @@ SectionUFE:AddParagraph("Credits:","Owner: Dvrknvss#0688                        
 --Dropdowns
 _G.gamestoteleport = "Select game to teleport"
 SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game to Teleport", Options = {
-    "Anime Dimensions","Anime Fighters","Arsenal","Attack On Titan: Downfall","Blox Fruits","Blox Hunt","Boxing Sim","Break In","Brookhaven","Car Crushers 2",
-    "Da Hood","Destruction Simulator","Dig It","Dungeon Quest","Field Trip Z","Flood Escape 2","Giant Survival","Gumball Factory Tycoon","IceBreaker","Jailbreak",
-    "Legends of Speed","Lift Legends","Lifting Simulator","Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends","OOF Tycoon!","Pet Simulator X",
-    "Phantom Forces","Prison Life","Ro Ghoul","Rumble Quest","Sharkbite","Skywars","Super Doomspire","The Rake Remastered","Tower of Hell",
-    "Viet Nam Piece","Wimbleworld","Zombie Attack"}, Callback = function(Value)
+"Anime Dimensions","Anime Fighters","Arsenal","Attack On Titan: Downfall","Blox Fruits","Blox Hunt",
+"Break In","Brookhaven","Car Crushers 2","Da Hood","Destruction Simulator","Dig It","Dragon Ball Online Generations","Dungeon Quest","Field Trip Z",
+"Flood Escape 2","Giant Survival","Gumball Factory Tycoon","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
+"Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends", "OOF Tycoon!","Pet Simulator X","Phantom Forces","Prison Life",
+"Ro Ghoul","Rumble Quest","Sharkbite","Skywars",
+"The Rake Remastered","Tower of Hell","Viet Nam Piece", "Wimbleworld", "Zombie Attack"}, Callback = function(Value)
     _G.gamestoteleport = Value
 end})
 SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = function()
@@ -215,12 +216,9 @@ SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = functi
         game:GetService("TeleportService"):Teleport(10325366821, player)
     elseif _G.gamestoteleport == "Wimbleworld" then
         game:GetService("TeleportService"):Teleport(9463737803, player)
-    elseif _G.gamestoteleport == "Boxing Sim" then
-        game:GetService("TeleportService"):Teleport(4058282580, player)
-    elseif _G.gamestoteleport == "Super Doomspire" then
-        game:GetService("TeleportService"):Teleport(3725149043, player)
+    elseif _G.gamestoteleport == "Dragon Ball Online Generations" then
+        game:GetService("TeleportService"):Teleport(4195834406, player)
     end
-    
 end})
 -- Supported Games
 if game.PlaceId == 2753915549 then --Blox Fruits
@@ -230,6 +228,14 @@ if game.PlaceId == 2753915549 then --Blox Fruits
     SectionSupportedGame:AddButton({Name =  "HoHo Hub", Callback = function()
         executedNotif()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+    end})
+elseif game.PlaceId == 4195834406 or game.PlaceId == 8634564720 or game.PlaceId == 4638110048 or game.PlaceId == 6933863874 or game.PlaceId == 8198008374 or game.PlaceId == 4846678133 or game.PlaceId == 4679166669 or game.PlaceId == 6960781275 or game.PlaceId == 5832703855 or game.PlaceId == 6960767556 or game.PlaceId == 4800653601 or game.PlaceId == 4647323270 or game.PlaceId == 5899251286 or game.PlaceId == 5818953827 or game.PlaceId == 5910108331 or game.PlaceId == 5910108331 or game.PlaceId == 7192205299 or game.PlaceId == 4195907816 or game.PlaceId == 4195956344 or game.PlaceId == 4836894930 or game.PlaceId == 4195906883 or game.PlaceId == 6906770208 or game.PlaceId == 4195906474 or game.PlaceId == 6906770208 or game.PlaceId == 4195906474 or game.PlaceId == 4195956597 or game.PlaceId == 10513238790 or game.PlaceId == 4195907096 or game.PlaceId == 5825015210 or game.PlaceId == 6978550807 or game.PlaceId == 6960716653 or game.PlaceId == 4195978588 or game.PlaceId == 5910112920 then --Dragon Ball Online Generations
+    foundSupportNotif()
+    local DetectedGameTab = Window:MakeTab({Name = "Dragon Ball Online Generations", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+    local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
+    SectionSupportedGame:AddButton({Name =  "Legacy Engine", Callback = function()
+        executedNotif()
+        loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/loader', true))()
     end})
 elseif game.PlaceId == 2788229376 then --Da Hood
     foundSupportNotif()
@@ -733,20 +739,6 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
     SectionSupportedGame:AddButton({Name =  "FijiHub", Callback = function()
         executedNotif()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/anthasenteredthechat/scriptz/main/fijihub"))()
-    end})
-elseif game.PlaceId == 4058282580 then -- Boxing Sim
-    local DetectedGameTab = Window:MakeTab({Name = "Boxing Sim", Icon = "rbxassetid://4483345998", PremiumOnly = false})
-    local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
-    SectionSupportedGame:AddButton({Name =  "Boxing Sim GUI", Callback = function()
-        executedNotif()
-    loadstring(game:HttpGet("https://pastebin.com/raw/mY2qKBWc"))()
-    end})
-elseif game.PlaceId == 3725149043 then -- Super Doomspire
-    local DetectedGameTab = Window:MakeTab({Name = "Super Doomspire", Icon = "rbxassetid://4483345998", PremiumOnly = false})
-    local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
-    SectionSupportedGame:AddButton({Name =  "Super Doomspire GUI", Callback = function()
-        executedNotif()
-    loadstring(game:HttpGet("https://pastebin.com/raw/8Bj755Dk"))()
     end})
 end
 OrionLib:Init() 
