@@ -85,7 +85,7 @@ SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game t
 "Flood Escape 2","Giant Survival","Gumball Factory Tycoon","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
 "Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends", "OOF Tycoon!","Pet Simulator X","Phantom Forces","Prison Life",
 "Ro Ghoul","Rumble Quest","Sharkbite","Skywars",
-"The Rake Remastered","Tower of Hell","Viet Nam Piece","Zombie Attack"}, Callback = function(Value)
+"The Rake Remastered","Tower of Hell","Viet Nam Piece", "Wimbleworld", "Zombie Attack"}, Callback = function(Value)
     _G.gamestoteleport = Value
 end})
 SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = function()
@@ -214,6 +214,8 @@ SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = functi
         game:GetService("TeleportService"):Teleport(9976239895, player)
     elseif _G.gamestoteleport == "OOF Tycoon!" then
         game:GetService("TeleportService"):Teleport(10325366821, player)
+    elseif _G.gamestoteleport == "WimbleWorld" then
+        game:GetService("TeleportService"):Teleport(9463737803, player)
     end
 end})
 -- Supported Games
