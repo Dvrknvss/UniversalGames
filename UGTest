@@ -9,7 +9,7 @@ local function hasChar()
 end
 player.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-        syn.queue_on_teleport("repeat task.wait() until game:IsLoaded() loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/testing', true))()")
+        syn.queue_on_teleport("repeat task.wait() until game:IsLoaded() loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalGames/main/UG', true))()")
     end
 end)
 --Keep this
@@ -266,6 +266,10 @@ elseif game.PlaceId == 286090429 then --Arsenal
     SectionSupportedGame:AddButton({Name =  "HoHo Hub", Callback = function()
         executedNotif()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+    end})
+    SectionSupportedGame:AddButton({Name =  "V.G. Hub", Callback = function()
+        executedNotif()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
     end})
 elseif game.PlaceId == 3851622790 then --Break In
     foundSupportNotif()
