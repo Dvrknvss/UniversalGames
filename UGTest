@@ -722,7 +722,7 @@ elseif game.PlaceId == 2248408710 then --Destruction Simulator
     local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
     SectionSupportedGame:AddButton({Name =  "FijiHub", Callback = function()
         executedNotif()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/anthasenteredthechat/scriptz/main/wimblenaya"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/anthasenteredthechat/scriptz/main/fijihub"))()
     end})
 end
 OrionLib:Init() 
