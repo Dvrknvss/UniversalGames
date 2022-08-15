@@ -84,7 +84,7 @@ SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game t
 "Boxing Sim", "Break In","Brookhaven","Car Crushers 2","Da Hood","Destruction Simulator","Dig It","Dragon Ball Online Generations","Dungeon Quest","Field Trip Z",
 "Flood Escape 2","Giant Survival","Gumball Factory Tycoon","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
 "Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends", "OOF Tycoon!","Pet Simulator X","Phantom Forces","Prison Life",
-"Ro Ghoul","Rumble Quest","Sharkbite","Skywars", "Super Doomspire", "The Rake Remastered","Tower of Hell","Viet Nam Piece", "Wimbleworld", "Zombie Attack"}, Callback = function(Value)
+"Project Lazarus", "Ro Ghoul","Rumble Quest","Sharkbite","Skywars", "Super Doomspire", "The Rake Remastered","Tower of Hell","Viet Nam Piece", "Wimbleworld", "Zombie Attack"}, Callback = function(Value)
     _G.gamestoteleport = Value
 end})
 SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = function()
@@ -221,6 +221,8 @@ SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = functi
         game:GetService("TeleportService"):Teleport(3725149043, player)
     elseif _G.gamestoteleport == "Dragon Ball Online Generations" then
         game:GetService("TeleportService"):Teleport(4195834406, player)
+    elseif _G.gamestoteleport == "Project Lazarus" then
+        game:GetService("TeleportService"):Teleport(443406476, player)
     end
 end})
 -- Supported Games
@@ -756,6 +758,13 @@ elseif game.PlaceId == 3725149043 then -- Super Doomspire
     SectionSupportedGame:AddButton({Name =  "Super Doomspire GUI", Callback = function()
         executedNotif()
     loadstring(game:HttpGet("https://pastebin.com/raw/8Bj755Dk"))()
+    end})
+elseif game.PlaceId == 443406476 then -- Project Lazarus
+    local DetectedGameTab = Window:MakeTab({Name = "Project Lazarus", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+    local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
+    SectionSupportedGame:AddButton({Name =  "Legacy Engine", Callback = function()
+        executedNotif()
+        loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/loader', true))()
     end})
 end
 OrionLib:Init() 
