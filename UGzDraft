@@ -80,11 +80,11 @@ SectionUFE:AddParagraph("Credits:","Owner: Dvrknvss#0688                        
 --Dropdowns
 _G.gamestoteleport = "Select game to teleport"
 SectionTeleport:AddDropdown({Name = "Select Game Here", Default = "Select Game to Teleport", Options = {
-"Anime Dimensions","Anime Fighters","Arsenal","Attack On Titan: Downfall","Blox Fruits","Blox Hunt",
+"Anime Dimensions","Anime Fighters","Arsenal","Attack On Titan: Downfall","BIG Paintball!","Blox Fruits","Blox Hunt",
 "Boxing Sim", "Break In","Brookhaven","Car Crushers 2","Da Hood","Destruction Simulator","Dig It","Dragon Ball Online Generations","Dungeon Quest","Field Trip Z",
 "Flood Escape 2","Giant Survival","Gumball Factory Tycoon","IceBreaker","Jailbreak","Legends of Speed","Lift Legends","Lifting Simulator",
-"Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends", "OOF Tycoon!","Pet Simulator X","Phantom Forces","Prison Life",
-"Project Lazarus", "Ro Ghoul","Rumble Quest","Sharkbite","Skywars", "Super Doomspire", "The Rake Remastered","Tower of Hell","Viet Nam Piece", "Wimbleworld", "Zombie Attack"}, Callback = function(Value)
+"Lucky Block Battlegrounds","Lumber Tycoon 2","Mad City","Milkshake Legends","OOF Tycoon!","Pet Simulator X","Phantom Forces","Prison Life",
+"Project Lazarus","Ro Ghoul","Rumble Quest","Sharkbite","Skywars", "Super Doomspire","The Rake Remastered","Tower of Hell","Viet Nam Piece","Wimbleworld","Zombie Attack"}, Callback = function(Value)
     _G.gamestoteleport = Value
 end})
 SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = function()
@@ -223,6 +223,8 @@ SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = functi
         game:GetService("TeleportService"):Teleport(4195834406, player)
     elseif _G.gamestoteleport == "Project Lazarus" then
         game:GetService("TeleportService"):Teleport(443406476, player)
+    elseif _G.gamestoteleport == "BIG Paintball!" then
+        game:GetService("TeleportService"):Teleport(3527629287, player)
     end
 end})
 -- Supported Games
@@ -234,13 +236,21 @@ if game.PlaceId == 2753915549 then --Blox Fruits
         executedNotif()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
     end})
-elseif game.PlaceId == 4195834406 or game.PlaceId == 8634564720 or game.PlaceId == 4638110048 or game.PlaceId == 6933863874 or game.PlaceId == 8198008374 or game.PlaceId == 4846678133 or game.PlaceId == 4679166669 or game.PlaceId == 6960781275 or game.PlaceId == 5832703855 or game.PlaceId == 6960767556 or game.PlaceId == 4800653601 or game.PlaceId == 4647323270 or game.PlaceId == 5899251286 or game.PlaceId == 5818953827 or game.PlaceId == 5910108331 or game.PlaceId == 5910108331 or game.PlaceId == 7192205299 or game.PlaceId == 4195907816 or game.PlaceId == 4195956344 or game.PlaceId == 4836894930 or game.PlaceId == 4195906883 or game.PlaceId == 6906770208 or game.PlaceId == 4195906474 or game.PlaceId == 6906770208 or game.PlaceId == 4195906474 or game.PlaceId == 4195956597 or game.PlaceId == 10513238790 or game.PlaceId == 4195907096 or game.PlaceId == 5825015210 or game.PlaceId == 6978550807 or game.PlaceId == 6960716653 or game.PlaceId == 4195978588 or game.PlaceId == 5910112920 then --Dragon Ball Online Generations
+elseif game.PlaceId == 4195834406 or 8634564720 or 4638110048 or 6933863874 or 8198008374 or 4846678133 or 4679166669 or 6960781275 or 5832703855 or 6960767556 or 4800653601 or 4647323270 or 5899251286 or 5818953827 or 5910108331 or 5910108331 or 7192205299 or 4195907816 or 4195956344 or 4836894930 or 4195906883 or 6906770208 or 4195906474 or 6906770208 or 4195906474 or 4195956597 or 10513238790 or 4195907096 or 5825015210 or 6978550807 or 6960716653 or 4195978588 or 5910112920 then --Dragon Ball Online Generations
     foundSupportNotif()
     local DetectedGameTab = Window:MakeTab({Name = "Dragon Ball Online Generations", Icon = "rbxassetid://4483345998", PremiumOnly = false})
     local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
     SectionSupportedGame:AddButton({Name =  "Legacy Engine", Callback = function()
         executedNotif()
         loadstring(game:HttpGet('https://github.com/LeanNBud/LegacyEngine/raw/main/DBOG/loader', true))()
+    end})
+elseif game.PlaceId == 3527629287  then -- BIG Paintball!
+    foundSupportNotif()
+    local DetectedGameTab = Window:MakeTab({Name = "BIG Paintball!", Icon = "rbxassetid://4483345998", PremiumOnly = false})
+    local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
+    SectionSupportedGame:AddButton({Name =  "Novice Hub", Callback = function()
+        executedNotif()
+        loadstring(game:HttpGet('loadstring(game:HttpGet("https://raw.githubusercontent.com/Amphvptere/Novice/main/BP"))()', true))()
     end})
 elseif game.PlaceId == 2788229376 then --Da Hood
     foundSupportNotif()
@@ -330,7 +340,7 @@ elseif game.PlaceId == 4003872968 then --Giant Survival
         executedNotif()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
     end})
-elseif game.PlaceId == 4954096313 or game.PlaceId == 5096191125 then --Field Trip Z
+elseif game.PlaceId == 4954096313 or 5096191125 then --Field Trip Z
     foundSupportNotif()
     local DetectedGameTab = Window:MakeTab({Name = "Field Trip Z", Icon = "rbxassetid://4483345998", PremiumOnly = false})
     local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
