@@ -214,7 +214,7 @@ SectionTeleport:AddButton({Name = "Teleport To Selected Game", Callback = functi
         game:GetService("TeleportService"):Teleport(9976239895, player)
     elseif _G.gamestoteleport == "OOF Tycoon!" then
         game:GetService("TeleportService"):Teleport(10325366821, player)
-    elseif _G.gamestoteleport == "WimbleWorld" then
+    elseif _G.gamestoteleport == "Wimbleworld" then
         game:GetService("TeleportService"):Teleport(9463737803, player)
     end
 end})
