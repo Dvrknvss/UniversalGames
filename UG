@@ -377,7 +377,7 @@ elseif game.PlaceId == 6938803436 then --Anime Dimensions
     local SectionSupportedGame = DetectedGameTab:AddSection({Name = "Detected Supported Game!"})
     SectionSupportedGame:AddButton({Name =  "speedy's hub", Callback = function()
         executedNotif()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/speedyx5/scripts/master/scriptsrc"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/speedyx5/scripts/master/src2"))()
     end})
 elseif game.PlaceId == 6299805723 then --Anime Fighters
     foundSupportNotif()
